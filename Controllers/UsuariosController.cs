@@ -7,7 +7,7 @@ namespace InventarioAPI.Controllers
 {
     [ApiController]
     [Route("api")]
-    public class TecnicoController : Controller
+    public class UsuariosController : Controller
     {
         InventarioAlemanaContext db = new InventarioAlemanaContext();
 
@@ -46,6 +46,20 @@ namespace InventarioAPI.Controllers
             }
             catch (Exception)
             { 
+                throw;
+            }
+        }
+
+
+        [HttpGet("getUsuario")]
+        public List<Usuario> GetUsuarios()
+        {
+            try
+            {
+                return db.Usuarios.ToList();
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }

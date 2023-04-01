@@ -5,9 +5,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArdTZnNCw5UOdip0BqRtezAAAAAACAAAAAAAQZgAAAAEAACAAAABGdCwHjGRb0oXC37uQVsK991ZVZd4uvkyUxP71LFDvqwAAAAAOgAAAAAIAACAAAAAB//m5Jn6dadlyyT7XljRelOLGdOITwum/0s36+1OyEyAAAAB5//CqOjbKlTmgU+wzLIwMHRH0t+Ed/9uSxxMOPJ3RPEAAAAA6VIVbmBZ5rexf4dp6w3ihboWgCpIGLJDAGB4cvC5BGX5saZ76XG1KF2MlOsUKhnENNpV1wrIklsITY9khf7Qx</EncryptedPassword>
-    <_PublishTargetUrl>ftp://192.52.242.121/www.cobyzero.somee.com</_PublishTargetUrl>
-    <History>True|2023-03-20T00:28:56.0199724Z;</History>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArdTZnNCw5UOdip0BqRtezAAAAAACAAAAAAAQZgAAAAEAACAAAACo1gV5U+2UGSJEotGIeDO3SB1SdY5lMRh1TW/36Cv3SQAAAAAOgAAAAAIAACAAAADzciGM/BnMmx2lTVrMDrTdycSkuL5x6C/BDlA4hkSP2iAAAACTBaFs/geK6tTPLzBO1yFoFeqIztCgBOwn/S++rX4U8kAAAABdL2psjvQ9pcRiRB2uU3xz383pn8C/ZHU0dZ/naqJho4P3e9ktdTSHKv3DbQ5NXsm7mV39OiJlzgkGuBDvksTJ</EncryptedPassword>
+    <_PublishTargetUrl>ftp://192.52.242.121/www.eAlemana.somee.com</_PublishTargetUrl>
+    <History>True|2023-04-01T15:49:27.1480428Z;True|2023-04-01T09:44:42.6824664-05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -24,19 +24,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/05/2022 15:26:00</publishTime>
     </File>
     <File Include="InventarioAPI.deps.json">
-      <publishTime>03/19/2023 19:26:32</publishTime>
+      <publishTime>04/01/2023 10:47:00</publishTime>
     </File>
     <File Include="InventarioAPI.dll">
-      <publishTime>03/19/2023 19:26:32</publishTime>
+      <publishTime>04/01/2023 10:46:57</publishTime>
     </File>
     <File Include="InventarioAPI.exe">
-      <publishTime>03/19/2023 19:26:32</publishTime>
+      <publishTime>04/01/2023 10:46:57</publishTime>
     </File>
     <File Include="InventarioAPI.pdb">
-      <publishTime>03/19/2023 19:26:32</publishTime>
+      <publishTime>04/01/2023 10:46:57</publishTime>
     </File>
     <File Include="InventarioAPI.runtimeconfig.json">
-      <publishTime>03/12/2023 19:13:56</publishTime>
+      <publishTime>04/01/2023 09:42:19</publishTime>
     </File>
     <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
       <publishTime>04/14/2020 17:39:12</publishTime>
@@ -183,7 +183,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/19/2020 13:53:38</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>03/19/2023 19:26:32</publishTime>
+      <publishTime>04/01/2023 10:47:00</publishTime>
     </File>
   </ItemGroup>
 </Project>

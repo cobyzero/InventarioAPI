@@ -33,7 +33,7 @@ public partial class InventarioAlemanaContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=(local);Database=InventarioAlemana;user id=sa;pwd=infierno;persist security info=False;packet size=4096;Encrypt=false");
+        => optionsBuilder.UseSqlServer("Server=InventarioApp.mssql.somee.com;Database=InventarioApp;user id=cobyzero_SQLLogin_3;pwd=9zec8kqwir;persist security info=False;packet size=4096;Encrypt=false");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
