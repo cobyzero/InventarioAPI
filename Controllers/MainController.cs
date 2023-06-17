@@ -10,26 +10,33 @@ namespace InventarioAPI.Controllers
     [Route("api")]
     public class MainController : Controller
     {
-        InventarioAlemanaContext db = new InventarioAlemanaContext(); 
+
+        InventarioAlemanaContext db;
+
+        public MainController(InventarioAlemanaContext db)
+        {
+            this.db = db;
+        }
 
         [HttpGet("count")]
-        public List<int> MainCount()
+        public Dictionary<string, int> MainCount()
         {
-            List<int> result = new List<int>(); 
+            Dictionary<string, int> keyValuePairs = new Dictionary<string, int>();
+
             try
             {
-                
-                    result.Add(db.Entrada.ToList().Count());
-                    result.Add(db.Salida.ToList().Count());
-                    result.Add(db.Productos.ToList().Count());
-                    result.Add(db.Usuarios.ToList().Count());
-                     
-                    return result;
+                keyValuePairs.Add("Entradas", db.Entrada.ToList().Count());
+                keyValuePairs.Add("Salidas", db.Salida.ToList().Count());
+                keyValuePairs.Add("Productos", db.Productos.ToList().Count());
+                keyValuePairs.Add("Usuarios", db.Usuarios.ToList().Count());
+
+                return keyValuePairs;
  
             }
             catch (Exception)
             {
-                return result;
+                Response.StatusCode = 404;
+                return keyValuePairs;
             }
         }
 
