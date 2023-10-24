@@ -1,7 +1,7 @@
-﻿using InventarioAPI.Data;
-using Microsoft.AspNetCore.Mvc;
+﻿ using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Text;
+using InventarioAPI.Entitys;
 
 namespace InventarioAPI.Controllers
 {

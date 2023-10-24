@@ -1,4 +1,4 @@
-﻿using InventarioAPI.Data;
+﻿using InventarioAPI.Entitys;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Text.Json;

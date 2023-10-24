@@ -1,4 +1,4 @@
-﻿using InventarioAPI.Data;
+﻿using InventarioAPI.Entitys;
 using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
 using System.Text;
@@ -28,7 +28,7 @@ namespace InventarioAPI.Controllers
                 keyValuePairs.Add("Entradas", db.Entrada.ToList().Count());
                 keyValuePairs.Add("Salidas", db.Salida.ToList().Count());
                 keyValuePairs.Add("Productos", db.Productos.ToList().Count());
-                keyValuePairs.Add("Usuarios", db.Usuarios.ToList().Count());
+                keyValuePairs.Add("Usuarios", db.Users.ToList().Count());
 
                 return keyValuePairs;
  

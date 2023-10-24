@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace InventarioAPI.Data;
+namespace InventarioAPI.Entitys;
 
 public partial class InventarioAlemanaContext : DbContext
 {
@@ -29,8 +29,11 @@ public partial class InventarioAlemanaContext : DbContext
 
     public virtual DbSet<Salidum> Salida { get; set; }
 
-    public virtual DbSet<Usuario> Usuarios { get; set; }
+    public virtual DbSet<User> Users { get; set; }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=(local);Database=InventarioAlemana;user id=sa;pwd=infierno;Encrypt=false");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -192,24 +195,20 @@ public partial class InventarioAlemanaContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Usuario>(entity =>
+        modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__USUARIO__5B65BF970A34F64A");
+            entity.HasKey(e => e.Id).HasName("PK__USUARIO__5B65BF970A34F64A");
 
-            entity.ToTable("USUARIO");
+            entity.HasIndex(e => e.Id, "UQ__USUARIO__5B65BF967649AED0").IsUnique();
 
-            entity.HasIndex(e => e.IdUsuario, "UQ__USUARIO__5B65BF967649AED0").IsUnique();
-
-            entity.Property(e => e.Clave)
+            entity.Property(e => e.Dni)
                 .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("DNI");
+            entity.Property(e => e.FirebaseToken)
+                .HasMaxLength(100)
                 .IsUnicode(false);
-            entity.Property(e => e.NombreCompleto)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.NombreUsuario)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.NumeroDocumento)
+            entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsUnicode(false);
         });
